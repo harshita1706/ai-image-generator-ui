@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator UI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="phone">
+
+        <div class="header">
+            <div class="logo">AI Generator</div>
+            <button class="pro-btn">PRO</button>
+        </div>
+
+        <div class="prompt-box">
+            <h3>Enter Prompt</h3>
+            <textarea placeholder="Describe your image..."></textarea>
+        </div>
+
+        <div class="actions">
+            <button onclick="uploadImage()">📷 Add Photo</button>
+            <button>💡 Inspiration</button>
+        </div>
+
+        <input type="file" id="fileInput" accept="image/*">
+
+        <div class="upload-preview" id="previewBox">
+            <img id="previewImg">
+        </div>
+
+        <div class="section-title">Aspect Ratio</div>
+
+        <div class="ratios">
+            <button class="ratio active">1:1</button>
+            <button class="ratio">9:16</button>
+            <button class="ratio">16:9</button>
+            <button class="ratio">3:2</button>
+            <button class="ratio">4:3</button>
+            <button class="ratio">5:4</button>
+        </div>
+
+        <div class="section-title">Art Style</div>
+
+        <div class="styles">
+
+            <div class="style-card active">
+                <img src="https://picsum.photos/100?1">
+            </div>
+
+            <div class="style-card">
+                <img src="https://picsum.photos/100?2">
+            </div>
+
+            <div class="style-card">
+                <img src="https://picsum.photos/100?3">
+            </div>
+
+            <div class="style-card">
+                <img src="https://picsum.photos/100?4">
+            </div>
+
+        </div>
+
+        <button class="generate-btn" onclick="generateImage()">
+            Generate Image
+        </button>
+
+        <div class="bottom-nav">
+            <button>🏠 Home</button>
+            <button>✨ Discover</button>
+            <button>👤 Profile</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
